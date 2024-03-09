@@ -13,7 +13,7 @@ A collection of my [LeetCode](https://leetcode.cn) solutions.
 ## 仓库组成
 
 * `/leetcode/editor/cn`
-LeetCode题解
+LeetCode 题解
 
 ## 文档更新日期
 
