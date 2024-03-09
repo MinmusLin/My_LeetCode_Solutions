@@ -10,6 +10,11 @@ A collection of my [LeetCode](https://leetcode.cn) solutions.
 
 我的 [LeetCode](https://leetcode.cn) 题解合集。
 
+## 仓库组成
+
+* `/leetcode/editor/cn`
+LeetCode题解
+
 ## 文档更新日期
 
-2024年3月6日
+2024年3月10日
