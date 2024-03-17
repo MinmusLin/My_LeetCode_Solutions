@@ -2,14 +2,15 @@
 class Solution {
 private:
     void getNext(string &needle, int next[]) {
-        int k = -1;
+        int k = -1, n = needle.length();
         next[0] = -1;
-        int n = needle.length();
         for (int i = 1; i < n; i++) {
-            while (k >= 0 && needle[i] != needle[k + 1])
+            while (k >= 0 && needle[i] != needle[k + 1]) {
                 k = next[k];
-            if (needle[i] == needle[k + 1])
+            }
+            if (needle[i] == needle[k + 1]) {
                 k++;
+            }
             next[i] = k;
         }
     }
@@ -20,10 +21,12 @@ public:
         int *next = new(std::nothrow) int[needle.length()];
         getNext(needle, next);
         for (int i = 0; i < n; i++) {
-            while (k >= 0 && haystack[i] != needle[k + 1])
+            while (k >= 0 && haystack[i] != needle[k + 1]) {
                 k = next[k];
-            if (haystack[i] == needle[k + 1])
+            }
+            if (haystack[i] == needle[k + 1]) {
                 k++;
+            }
             if (k == l - 1) {
                 delete[] next;
                 return i - l + 1;
