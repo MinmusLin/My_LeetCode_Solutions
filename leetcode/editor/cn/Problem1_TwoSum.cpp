@@ -3,12 +3,12 @@ class Solution {
 public:
     vector<int> twoSum(vector<int> &nums, int target) {
         size_t n = nums.size();
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j < n; j++) {
-                if (nums[i] + nums[j] == target) {
-                    return {i, j};
-                }
+        unordered_map<int, int> dic;
+        for (int i = 0; i < n; i++) {
+            if (dic.find(target - nums[i]) != dic.end()) {
+                return {dic[target - nums[i]], i};
             }
+            dic.emplace(nums[i], i);
         }
         return {};
     }
